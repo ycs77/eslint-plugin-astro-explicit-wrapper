@@ -1,9 +1,44 @@
 {
+  "name": "eslint-plugin-astro-wrap-elements",
   "type": "module",
-  "private": true,
-  "scripts": {},
-  "dependencies": {},
+  "version": "0.0.1",
+  "description": "ESLint plugin for Astro to check is wrapped a element out of multiple elements",
+  "license": "MIT",
+  "homepage": "https://github.com/ycs77/eslint-plugin-astro-wrap-elements",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ycs77/eslint-plugin-astro-wrap-elements.git"
+  },
+  "bugs": "https://github.com/ycs77/eslint-plugin-astro-wrap-elements/issues",
+  "keywords": [
+    "eslint-plugin"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build",
+    "release": "bumpp --commit \"Release v%s\" && npm publish"
+  },
+  "peerDependencies": {
+    "eslint": "*"
+  },
   "devDependencies": {
+    "@ycs77/eslint-config": "^4.3.0",
+    "bumpp": "^10.1.1",
+    "eslint": "^9.28.0",
+    "tsdown": "^0.12.7",
     "typescript": "^5.8.3"
   }
 }
