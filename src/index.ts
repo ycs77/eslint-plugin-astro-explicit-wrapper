@@ -1,15 +1,28 @@
 import type { ESLint, Linter } from 'eslint'
 import { version } from '../package.json'
+import explicitWrapper from './rules/explicit-wrapper'
 
 const plugin = {
   meta: {
-    name: 'astro-wrap-elements',
+    name: 'astro-explicit-wrapper',
     version,
   },
+  // @keep-sorted
   rules: {
-    //
+    'explicit-wrapper': explicitWrapper,
   },
 } satisfies ESLint.Plugin
+
+const config: Linter.Config = {
+  plugins: {
+    'astro-explicit-wrapper': plugin,
+  },
+  rules: {
+    'astro-explicit-wrapper/explicit-wrapper': 'error',
+  },
+}
+
+Object.assign(plugin, { config })
 
 export default plugin
 
