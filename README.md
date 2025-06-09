@@ -29,6 +29,10 @@ If you think this package has helped you, please consider [Becoming a sponsor](h
   <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" alt="Become a Patron" />
 </a>
 
+## Credits
+
+* [eslint-plugin-antfu](https://github.com/antfu/eslint-plugin-antfu)
+
 ## License
 
 Under the [MIT LICENSE](LICENSE)
