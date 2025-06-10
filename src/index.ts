@@ -29,9 +29,9 @@ const config: Linter.Config[] = [
   },
 ]
 
-Object.assign(plugin, { config })
+export default Object.assign(plugin, { config })
 
-export default plugin
+export const { meta, rules } = plugin
 
 type RuleDefinitions = typeof plugin['rules']
 
