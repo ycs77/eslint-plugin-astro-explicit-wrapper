@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-astro-explicit-wrapper",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ESLint plugin for use in Astro, requires explicit wrapping adjacent JSX elements in `&&` or ternary expressions with an HTML element or Fragment.",
   "license": "MIT",
   "homepage": "https://github.com/ycs77/eslint-plugin-astro-explicit-wrapper",
