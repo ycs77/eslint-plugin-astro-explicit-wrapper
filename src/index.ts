@@ -13,14 +13,21 @@ const plugin = {
   },
 } satisfies ESLint.Plugin
 
-const config: Linter.Config = {
-  plugins: {
-    'astro-explicit-wrapper': plugin,
+const config: Linter.Config[] = [
+  {
+    name: 'astro-explicit-wrapper/setup',
+    plugins: {
+      'astro-explicit-wrapper': plugin,
+    },
   },
-  rules: {
-    'astro-explicit-wrapper/explicit-wrapper': 'error',
+  {
+    name: 'astro-explicit-wrapper/rules',
+    files: ['**/*.astro'],
+    rules: {
+      'astro-explicit-wrapper/explicit-wrapper': 'error',
+    },
   },
-}
+]
 
 Object.assign(plugin, { config })
 
