@@ -9,7 +9,7 @@ export default createRule({
     type: 'problem',
     docs: {
       description: 'Require wrapping adjacent JSX elements in `&&` or ternary expressions with an HTML element or Fragment.',
-      url: 'https://github.com/ycs77/eslint-plugin-astro-wrap-elements/blob/main/src/rules/wrap-elements.md',
+      url: 'https://github.com/ycs77/eslint-plugin-astro-explicit-wrapper/blob/main/src/rules/explicit-wrapper.md',
     },
     messages: {
       adjacentJsxNotWrapped: 'Adjacent JSX elements must be wrapped in an enclosing tag',
